@@ -1,0 +1,677 @@
+# depslib dependency file v1.0
+1708597615 source:d:\symulator_wedkowania\grunt.cpp
+	"Grunt.hpp"
+
+1708685912 d:\symulator_wedkowania\grunt.hpp
+	"Metoda.hpp"
+	"grunt_m.hpp"
+	"sprzet_m.hpp"
+
+1708686130 d:\symulator_wedkowania\metoda.hpp
+	"utils.hpp"
+
+1708799140 d:\symulator_wedkowania\utils.hpp
+	<iostream>
+	<windows.h>
+	<fstream>
+
+1708521965 d:\symulator_wedkowania\grunt_m.hpp
+	<iostream>
+	<windows.h>
+
+1708717691 d:\symulator_wedkowania\sprzet_m.hpp
+	<iostream>
+	<windows.h>
+
+1708521906 source:d:\symulator_wedkowania\grunt_m.cpp
+	"grunt_m.hpp"
+
+1708717256 source:d:\symulator_wedkowania\miejsce_m.cpp
+	"miejsce_m.hpp"
+
+1708717543 d:\symulator_wedkowania\miejsce_m.hpp
+	<iostream>
+	<windows.h>
+
+1708639567 source:d:\symulator_wedkowania\karp.cpp
+	"Karp.hpp"
+
+1708639555 d:\symulator_wedkowania\karp.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+
+1708714063 d:\symulator_wedkowania\ryba.hpp
+	"utils.hpp"
+	"Metoda.hpp"
+	<iostream>
+	<array>
+	<memory>
+
+1708686182 d:\symulator_wedkowania\splawik.hpp
+	"Metoda.hpp"
+	"grunt_m.hpp"
+	"sprzet_m.hpp"
+
+1708685930 d:\symulator_wedkowania\spinning.hpp
+	"Metoda.hpp"
+	"spinning_m.hpp"
+	"sprzet_m.hpp"
+
+1708524011 d:\symulator_wedkowania\spinning_m.hpp
+	<iostream>
+	<windows.h>
+
+1708713936 d:\symulator_wedkowania\ryby_m.hpp
+	<iostream>
+	<windows.h>
+
+1708600375 source:d:\symulator_wedkowania\leszcz.cpp
+	"Leszcz.hpp"
+
+1708638991 d:\symulator_wedkowania\leszcz.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+
+1708638629 source:d:\symulator_wedkowania\lin.cpp
+	"Lin.hpp"
+
+1708638766 d:\symulator_wedkowania\lin.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+
+1708709118 source:d:\symulator_wedkowania\mietus.cpp
+	"Mietus.hpp"
+
+1708709329 d:\symulator_wedkowania\mietus.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+
+1708639608 source:d:\symulator_wedkowania\okon.cpp
+	"Okon.hpp"
+
+1708639597 d:\symulator_wedkowania\okon.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+	"spinning_m.hpp"
+
+1708600485 source:d:\symulator_wedkowania\ploc.cpp
+	"Ploc.hpp"
+
+1708639627 d:\symulator_wedkowania\ploc.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+
+1708713851 source:d:\symulator_wedkowania\ryby_m.cpp
+	"ryby_m.hpp"
+
+1708600524 source:d:\symulator_wedkowania\sieja.cpp
+	"Sieja.hpp"
+
+1708639670 d:\symulator_wedkowania\sieja.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+
+1708600509 source:d:\symulator_wedkowania\sielawa.cpp
+	"Sielawa.hpp"
+
+1708639649 d:\symulator_wedkowania\sielawa.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+
+1708597230 source:d:\symulator_wedkowania\spinning.cpp
+	"Spinning.hpp"
+
+1708602186 source:d:\symulator_wedkowania\spinning_m.cpp
+	"spinning_m.hpp"
+
+1708685989 source:d:\symulator_wedkowania\splawik.cpp
+	"Splawik.hpp"
+
+1708717573 source:d:\symulator_wedkowania\sprzet_m.cpp
+	"sprzet_m.hpp"
+
+1708597157 source:d:\symulator_wedkowania\szczupak.cpp
+	"Szczupak.hpp"
+
+1708639690 d:\symulator_wedkowania\szczupak.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"Zywiec.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+	"spinning_m.hpp"
+
+1708685951 d:\symulator_wedkowania\zywiec.hpp
+	"Metoda.hpp"
+	"zywiec_m.hpp"
+	"sprzet_m.hpp"
+
+1708523883 d:\symulator_wedkowania\zywiec_m.hpp
+	<iostream>
+	<windows.h>
+
+1708801501 source:d:\symulator_wedkowania\utils.cpp
+	"utils.hpp"
+
+1708597418 source:d:\symulator_wedkowania\wzdrega.cpp
+	"Wzdrega.hpp"
+
+1708639711 d:\symulator_wedkowania\wzdrega.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"ryby_m.hpp"
+	"utils.hpp"
+	"spinning_m.hpp"
+
+1708597194 source:d:\symulator_wedkowania\zywiec.cpp
+	"Zywiec.hpp"
+
+1708605532 source:d:\symulator_wedkowania\zywiec_m.cpp
+	"zywiec_m.hpp"
+
+1708632097 source:d:\symulator_wedkowania\brzeg.cpp
+	"Brzeg.hpp"
+
+1708684541 d:\symulator_wedkowania\brzeg.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Leszcz.hpp"
+	"Lin.hpp"
+	"Karp.hpp"
+	"Okon.hpp"
+	"Ploc.hpp"
+	"Sielawa.hpp"
+	"Sieja.hpp"
+	"Szczupak.hpp"
+	"Mietus.hpp"
+	"Wzdrega.hpp"
+	"Miejsce.hpp"
+	"utils.hpp"
+	"ryby_m.hpp"
+
+1708684514 d:\symulator_wedkowania\miejsce.hpp
+	"utils.hpp"
+	"Ryba.hpp"
+
+1708632068 source:d:\symulator_wedkowania\lod.cpp
+	"Lod.hpp"
+
+1708684600 d:\symulator_wedkowania\lod.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Leszcz.hpp"
+	"Lin.hpp"
+	"Karp.hpp"
+	"Okon.hpp"
+	"Ploc.hpp"
+	"Sielawa.hpp"
+	"Sieja.hpp"
+	"Szczupak.hpp"
+	"Mietus.hpp"
+	"Wzdrega.hpp"
+	"Miejsce.hpp"
+	"utils.hpp"
+	"ryby_m.hpp"
+
+1708632193 source:d:\symulator_wedkowania\lodz.cpp
+	"Lodz.hpp"
+
+1708684585 d:\symulator_wedkowania\lodz.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Leszcz.hpp"
+	"Lin.hpp"
+	"Karp.hpp"
+	"Okon.hpp"
+	"Ploc.hpp"
+	"Sielawa.hpp"
+	"Sieja.hpp"
+	"Szczupak.hpp"
+	"Mietus.hpp"
+	"Wzdrega.hpp"
+	"Miejsce.hpp"
+	"utils.hpp"
+	"ryby_m.hpp"
+	"grunt_m.hpp"
+	"zywiec_m.hpp"
+
+1708632234 source:d:\symulator_wedkowania\pomost.cpp
+	"Pomost.hpp"
+
+1708684563 d:\symulator_wedkowania\pomost.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Ryba.hpp"
+	"Leszcz.hpp"
+	"Lin.hpp"
+	"Karp.hpp"
+	"Okon.hpp"
+	"Ploc.hpp"
+	"Sielawa.hpp"
+	"Sieja.hpp"
+	"Szczupak.hpp"
+	"Mietus.hpp"
+	"Wzdrega.hpp"
+	"Miejsce.hpp"
+	"utils.hpp"
+	"ryby_m.hpp"
+
+1708604235 source:d:\symulator_wedkowania\lanskie.cpp
+	"Lanskie.hpp"
+
+1708684433 d:\symulator_wedkowania\lanskie.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Miejsce.hpp"
+	"Brzeg.hpp"
+	"Pomost.hpp"
+	"Lodz.hpp"
+	"Lod.hpp"
+	"Jezioro.hpp"
+	"utils.hpp"
+	"miejsce_m.hpp"
+
+1708682752 d:\symulator_wedkowania\jezioro.hpp
+	"utils.hpp"
+	"Miejsce.hpp"
+
+1708629974 source:d:\symulator_wedkowania\sek.cpp
+	"Sek.hpp"
+
+1708696640 d:\symulator_wedkowania\sek.hpp
+	<iostream>
+	<array>
+	<memory>
+	"Miejsce.hpp"
+	"Brzeg.hpp"
+	"Pomost.hpp"
+	"Lodz.hpp"
+	"Lod.hpp"
+	"Jezioro.hpp"
+	"utils.hpp"
+	"miejsce_m.hpp"
+
+1708797096 source:d:\symulator_wedkowania\test.cpp
+	"Symulator.hpp"
+	"Jeziora.hpp"
+	"Miejsca.hpp"
+	"Ryby.hpp"
+	"Metody.hpp"
+	"Sprzety.hpp"
+	"MenuManager.hpp"
+
+1708625947 source:d:\symulator_wedkowania\symulator.cpp
+	"Symulator.hpp"
+
+1708690393 d:\symulator_wedkowania\symulator.hpp
+	"Jezioro.hpp"
+	"Miejsce.hpp"
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Sprzet.hpp"
+
+1708802239 source:d:\symulator_wedkowania\ryby.cpp
+	"Ryby.hpp"
+
+1708802247 d:\symulator_wedkowania\ryby.hpp
+	"Ryba.hpp"
+	"Miejsce.hpp"
+	"Leszcz.hpp"
+	"Lin.hpp"
+	"Karp.hpp"
+	"Okon.hpp"
+	"Ploc.hpp"
+	"Sielawa.hpp"
+	"Sieja.hpp"
+	"Szczupak.hpp"
+	"Mietus.hpp"
+	"Wzdrega.hpp"
+	"Brzeg.hpp"
+	"Pomost.hpp"
+	"Lodz.hpp"
+	"BackToMenu.hpp"
+	"RybaPusta.hpp"
+
+1708637956 source:d:\symulator_wedkowania\ryba.cpp
+	"Ryba.hpp"
+
+1708801579 source:d:\symulator_wedkowania\jeziora.cpp
+	"Jeziora.hpp"
+
+1708801073 d:\symulator_wedkowania\jeziora.hpp
+	"Jezioro.hpp"
+	"Lanskie.hpp"
+	"Sek.hpp"
+	"JezioroPuste.hpp"
+	"BackToMenu.hpp"
+
+1708802382 source:d:\symulator_wedkowania\miejsca.cpp
+	"Miejsca.hpp"
+
+1708802305 d:\symulator_wedkowania\miejsca.hpp
+	"Brzeg.hpp"
+	"Pomost.hpp"
+	"Lodz.hpp"
+	"Miejsce.hpp"
+	"Jezioro.hpp"
+	"Sek.hpp"
+	"Lanskie.hpp"
+	"BackToMenu.hpp"
+	"MiejscePuste.hpp"
+
+1708802824 source:d:\symulator_wedkowania\metody.cpp
+	"Metody.hpp"
+
+1708802077 d:\symulator_wedkowania\metody.hpp
+	"Leszcz.hpp"
+	"Lin.hpp"
+	"Karp.hpp"
+	"Okon.hpp"
+	"Ploc.hpp"
+	"Sielawa.hpp"
+	"Sieja.hpp"
+	"Szczupak.hpp"
+	"Mietus.hpp"
+	"Wzdrega.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"Zywiec.hpp"
+	"BackToMenu.hpp"
+	"MetodaPusta.hpp"
+
+1708693133 source:d:\symulator_wedkowania\nomspl.cpp
+	"NomSpl.hpp"
+
+1708692708 d:\symulator_wedkowania\nomspl.hpp
+	"Sprzet.hpp"
+	"grunt_m.hpp"
+	"Miejsce.hpp"
+	"Ryba.hpp"
+	"Karp.hpp"
+	"Pomost.hpp"
+
+1708690329 d:\symulator_wedkowania\sprzet.hpp
+	"utils.hpp"
+
+1708693090 source:d:\symulator_wedkowania\maxispl.cpp
+	"MaxiSpl.hpp"
+
+1708692820 d:\symulator_wedkowania\maxispl.hpp
+	"Sprzet.hpp"
+	"grunt_m.hpp"
+	"Miejsce.hpp"
+	"Ryba.hpp"
+	"Karp.hpp"
+	"Pomost.hpp"
+
+1708693126 source:d:\symulator_wedkowania\minispl.cpp
+	"MiniSpl.hpp"
+
+1708692714 d:\symulator_wedkowania\minispl.hpp
+	"Sprzet.hpp"
+	"grunt_m.hpp"
+	"Miejsce.hpp"
+	"Ryba.hpp"
+	"Karp.hpp"
+	"Pomost.hpp"
+
+1708802184 source:d:\symulator_wedkowania\sprzety.cpp
+	"Sprzety.hpp"
+
+1708802230 d:\symulator_wedkowania\sprzety.hpp
+	"Sprzet.hpp"
+	"Miejsce.hpp"
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Brzeg.hpp"
+	"Pomost.hpp"
+	"Lodz.hpp"
+	"Lod.hpp"
+	"Leszcz.hpp"
+	"Lin.hpp"
+	"Karp.hpp"
+	"Okon.hpp"
+	"Ploc.hpp"
+	"Sielawa.hpp"
+	"Sieja.hpp"
+	"Szczupak.hpp"
+	"Mietus.hpp"
+	"Wzdrega.hpp"
+	"Grunt.hpp"
+	"Splawik.hpp"
+	"Spinning.hpp"
+	"Zywiec.hpp"
+	"MiniSpl.hpp"
+	"NomSpl.hpp"
+	"MaxiSpl.hpp"
+	"MiniGr.hpp"
+	"NomGr.hpp"
+	"MaxiGr.hpp"
+	"MiniSp.hpp"
+	"NomSp.hpp"
+	"MaxiSp.hpp"
+	"MiniZyw.hpp"
+	"NomZyw.hpp"
+	"MaxiZyw.hpp"
+	"BackToMenu.hpp"
+	"SprzetPusty.hpp"
+
+1708690994 source:d:\symulator_wedkowania\maxisp.cpp
+	"MaxiSp.hpp"
+
+1708693265 d:\symulator_wedkowania\maxisp.hpp
+	"Sprzet.hpp"
+	"spinning_m.hpp"
+
+1708691854 source:d:\symulator_wedkowania\maxizyw.cpp
+	"MaxiZyw.hpp"
+
+1708693224 d:\symulator_wedkowania\maxizyw.hpp
+	"Sprzet.hpp"
+	"zywiec_m.hpp"
+
+1708690854 source:d:\symulator_wedkowania\minisp.cpp
+	"MiniSp.hpp"
+
+1708693316 d:\symulator_wedkowania\minisp.hpp
+	"Sprzet.hpp"
+	"spinning_m.hpp"
+
+1708691263 source:d:\symulator_wedkowania\minizyw.cpp
+	"MiniZyw.hpp"
+
+1708693207 d:\symulator_wedkowania\minizyw.hpp
+	"Sprzet.hpp"
+	"zywiec_m.hpp"
+
+1708690920 source:d:\symulator_wedkowania\nomsp.cpp
+	"NomSp.hpp"
+
+1708693288 d:\symulator_wedkowania\nomsp.hpp
+	"Sprzet.hpp"
+	"spinning_m.hpp"
+
+1708691789 source:d:\symulator_wedkowania\nomzyw.cpp
+	"NomZyw.hpp"
+
+1708693215 d:\symulator_wedkowania\nomzyw.hpp
+	"Sprzet.hpp"
+	"zywiec_m.hpp"
+
+1708690797 source:d:\symulator_wedkowania\maxigr.cpp
+	"MaxiGr.hpp"
+
+1708693072 d:\symulator_wedkowania\maxigr.hpp
+	"Sprzet.hpp"
+	"grunt_m.hpp"
+
+1708690730 source:d:\symulator_wedkowania\minigr.cpp
+	"MiniGr.hpp"
+
+1708693079 d:\symulator_wedkowania\minigr.hpp
+	"Sprzet.hpp"
+	"grunt_m.hpp"
+
+1708690770 source:d:\symulator_wedkowania\nomgr.cpp
+	"NomGr.hpp"
+
+1708693100 d:\symulator_wedkowania\nomgr.hpp
+	"Sprzet.hpp"
+	"grunt_m.hpp"
+
+1708710043 source:d:\symulator_wedkowania\metodapusta.cpp
+	"MetodaPusta.hpp"
+
+1708715621 d:\symulator_wedkowania\metodapusta.hpp
+	"Metoda.hpp"
+	"metoda_m.hpp"
+
+1708713834 d:\symulator_wedkowania\metoda_m.hpp
+	<iostream>
+	<windows.h>
+
+1708713864 source:d:\symulator_wedkowania\metoda_m.cpp
+	"metoda_m.hpp"
+
+1708712425 source:d:\symulator_wedkowania\rybapusta.cpp
+	"RybaPusta.hpp"
+
+1708715629 d:\symulator_wedkowania\rybapusta.hpp
+	"Ryba.hpp"
+	"ryby_m.hpp"
+
+1708715360 source:d:\symulator_wedkowania\jezioro_m.cpp
+	"jezioro_m.hpp"
+
+1708715364 d:\symulator_wedkowania\jezioro_m.hpp
+	<iostream>
+	<windows.h>
+
+1708715613 d:\symulator_wedkowania\jezioropuste.hpp
+	"Jezioro.hpp"
+	"jezioro_m.hpp"
+
+1708714946 source:d:\symulator_wedkowania\jezioropuste.cpp
+	"JezioroPuste.hpp"
+
+1708717286 d:\symulator_wedkowania\miejscepuste.hpp
+	"Miejsce.hpp"
+	"miejsce_m.hpp"
+
+1708717102 source:d:\symulator_wedkowania\miejscepuste.cpp
+	"MiejscePuste.hpp"
+
+1708717430 source:d:\symulator_wedkowania\sprzetpusty.cpp
+	"SprzetPusty.hpp"
+
+1708717469 d:\symulator_wedkowania\sprzetpusty.hpp
+	"Sprzet.hpp"
+	"sprzet_m.hpp"
+
+1708802708 source:d:\symulator_wedkowania\menumanager.cpp
+	"MenuManager.hpp"
+
+1708801764 d:\symulator_wedkowania\menumanager.hpp
+	"utils.hpp"
+	"Symulator.hpp"
+	"Jeziora.hpp"
+	"Miejsca.hpp"
+	"Ryby.hpp"
+	"Metody.hpp"
+	"Sprzety.hpp"
+
+1708799146 d:\symulator_wedkowania\backtomenu.hpp
+	"Jezioro.hpp"
+	"Miejsce.hpp"
+	"Ryba.hpp"
+	"Metoda.hpp"
+	"Sprzet.hpp"
+
+1708798243 source:d:\symulator_wedkowania\backtomenu.cpp
+	"BackToMenu.hpp"
+

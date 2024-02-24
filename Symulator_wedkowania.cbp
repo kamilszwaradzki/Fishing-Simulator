@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Symulator_wedkowania" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Symulator_wedkowania" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Symulator_wedkowania" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Brzeg.cpp" />
+		<Unit filename="Brzeg.hpp" />
+		<Unit filename="Grunt.cpp" />
+		<Unit filename="Grunt.hpp" />
+		<Unit filename="Jezioro.hpp" />
+		<Unit filename="Karp.cpp" />
+		<Unit filename="Karp.hpp" />
+		<Unit filename="Lanskie.cpp" />
+		<Unit filename="Lanskie.hpp" />
+		<Unit filename="Leszcz.cpp" />
+		<Unit filename="Leszcz.hpp" />
+		<Unit filename="Lin.cpp" />
+		<Unit filename="Lin.hpp" />
+		<Unit filename="Lod.cpp" />
+		<Unit filename="Lod.hpp" />
+		<Unit filename="Lodz.cpp" />
+		<Unit filename="Lodz.hpp" />
+		<Unit filename="Metoda.hpp" />
+		<Unit filename="Miejsce.hpp" />
+		<Unit filename="Mietus.cpp" />
+		<Unit filename="Mietus.hpp" />
+		<Unit filename="Okon.cpp" />
+		<Unit filename="Okon.hpp" />
+		<Unit filename="Ploc.cpp" />
+		<Unit filename="Ploc.hpp" />
+		<Unit filename="Pomost.cpp" />
+		<Unit filename="Pomost.hpp" />
+		<Unit filename="Ryba.hpp" />
+		<Unit filename="Sek.cpp" />
+		<Unit filename="Sek.hpp" />
+		<Unit filename="Sieja.cpp" />
+		<Unit filename="Sieja.hpp" />
+		<Unit filename="Sielawa.cpp" />
+		<Unit filename="Sielawa.hpp" />
+		<Unit filename="Spinning.cpp" />
+		<Unit filename="Spinning.hpp" />
+		<Unit filename="Splawik.cpp" />
+		<Unit filename="Splawik.hpp" />
+		<Unit filename="Szczupak.cpp" />
+		<Unit filename="Szczupak.hpp" />
+		<Unit filename="Test.cpp" />
+		<Unit filename="Wzdrega.cpp" />
+		<Unit filename="Wzdrega.hpp" />
+		<Unit filename="Zywiec.cpp" />
+		<Unit filename="Zywiec.hpp" />
+		<Unit filename="grunt_m.cpp" />
+		<Unit filename="grunt_m.hpp" />
+		<Unit filename="miejsce_m.cpp" />
+		<Unit filename="miejsce_m.hpp" />
+		<Unit filename="ryby_m.cpp" />
+		<Unit filename="ryby_m.hpp" />
+		<Unit filename="spinning_m.cpp" />
+		<Unit filename="spinning_m.hpp" />
+		<Unit filename="sprzet_m.cpp" />
+		<Unit filename="sprzet_m.hpp" />
+		<Unit filename="utils.cpp" />
+		<Unit filename="utils.hpp" />
+		<Unit filename="zywiec_m.cpp" />
+		<Unit filename="zywiec_m.hpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
