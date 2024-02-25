@@ -20,5 +20,4 @@ Jezioro* getJezioro(int &jezioro) {
             break;
         }
     }
-    //return new JezioroPuste();
 }

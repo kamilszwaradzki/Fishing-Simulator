@@ -17,6 +17,7 @@
 #include "Brzeg.hpp"
 #include "Pomost.hpp"
 #include "Lodz.hpp"
+#include "Lod.hpp"
 #include "BackToMenu.hpp"
 #include "RybaPusta.hpp"
 

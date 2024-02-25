@@ -7,8 +7,9 @@
 #include "Ryba.hpp"
 #include "Metoda.hpp"
 #include "Sprzet.hpp"
+#include "Zaneta.hpp"
 
-class BackToMenu : public Jezioro, public Miejsce, public Ryba, public Metoda, public Sprzet
+class BackToMenu : public Jezioro, public Miejsce, public Ryba, public Metoda, public Sprzet, public Zaneta
 {
     public:
         VoidFunctionWithoutParameter show = backToMenuFunction;

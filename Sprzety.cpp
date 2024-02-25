@@ -45,5 +45,4 @@ Sprzet* getSprzet(Miejsce &miejsce, Ryba &ryba, Metoda &metoda, int &wybor) {
             break;
         }
     }
-    return new SprzetPusty();
 }

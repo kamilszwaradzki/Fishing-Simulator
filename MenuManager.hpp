@@ -8,6 +8,9 @@
 #include "Ryby.hpp"
 #include "Metody.hpp"
 #include "Sprzety.hpp"
+#include "Zanety.hpp"
+// do usuniêcia
+#include "dodatki.hpp"
 
 class MenuManager
 {

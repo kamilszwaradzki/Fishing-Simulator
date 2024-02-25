@@ -33,3 +33,6 @@
 
 # Old directories
 stare/*
+
+# generated docs
+doxygen/*

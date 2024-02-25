@@ -5,6 +5,7 @@
 #include "Ryba.hpp"
 #include "Metoda.hpp"
 #include "Sprzet.hpp"
+#include "Zaneta.hpp"
 
 class Symulator
 {
@@ -54,6 +55,14 @@ class Symulator
          * \param val New value to set
          */
         void Setsprzet(Sprzet &val) { sprzet = &val; }
+        /** Access zaneta
+         * \return The current value of zaneta
+         */
+        Zaneta* Getzaneta() { return zaneta; }
+        /** Set zaneta
+         * \param val New value to set
+         */
+        void Setzaneta(Zaneta &val) { zaneta = &val; }
 
     protected:
 
@@ -63,6 +72,7 @@ class Symulator
         Ryba* ryba; //!< Member variable "ryba"
         Metoda* metoda; //!< Member variable "metoda"
         Sprzet* sprzet; //!< Member variable "sprzet"
+        Zaneta* zaneta; //!< Member variable "zaneta"
 };
 
 #endif // SYMULATOR_HPP
