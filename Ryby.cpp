@@ -1,6 +1,6 @@
 #include "Ryby.hpp"
 
-Ryba* getRyba(Miejsce &miejsce, int &wybor) {
+Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
     switch(wybor) {
         case 1: {
             return new Leszcz();

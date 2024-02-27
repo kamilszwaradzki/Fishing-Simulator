@@ -7,15 +7,9 @@
 class Sruta : public Zaneta
 {
     public:
-        void load() { cout << "Sruta, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Sruta, Mnoznik: " << dbMultiplier << endl; }
         Sruta();
-        /** Default destructor */
         ~Sruta();
-
-    protected:
-
-    private:
 };
 
 #endif // SRUTA_HPP

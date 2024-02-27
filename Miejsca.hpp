@@ -11,6 +11,6 @@
 #include "MiejscePuste.hpp"
 
 // miejsce: Brzeg, Pomost, Lodz, Lod lub powrot ;p
-Miejsce* getMiejsce(Jezioro &jezioro, int &wybor);
+Miejsce* getMiejsce(const Jezioro &jezioro, const int &wybor);
 
 #endif // MIEJSCA_HPP_INCLUDED

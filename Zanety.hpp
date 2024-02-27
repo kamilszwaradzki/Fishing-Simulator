@@ -18,6 +18,6 @@
 #include "ZanetaPusta.hpp"
 
 
-Zaneta* getZaneta(int &wybor, int &zaneta);
+Zaneta* getZaneta(const int &wybor, const int &zaneta);
 
 #endif // ZANETY_HPP_INCLUDED

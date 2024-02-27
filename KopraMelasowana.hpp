@@ -7,15 +7,9 @@
 class KopraMelasowana : public Zaneta
 {
     public:
-        void load() { cout << "Kopra Melasowana, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Kopra Melasowana, Mnoznik: " << dbMultiplier << endl; }
         KopraMelasowana();
-        /** Default destructor */
         ~KopraMelasowana();
-
-    protected:
-
-    private:
 };
 
 #endif // KOPRAMELASOWANA_HPP

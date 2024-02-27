@@ -3,21 +3,20 @@
 
 #include "Sprzet.hpp"
 #include "grunt_m.hpp"
+#include "Miejsce.hpp"
+#include "Ryba.hpp"
+#include "Karp.hpp"
+#include "Pomost.hpp"
+#include "Lodz.hpp"
 
 /// brief: Sprzet nominalny na Grunt
 class NomGr : public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = nom;
-        void load() { show(); }
-        /** Default constructor */
-        NomGr();
-        /** Default destructor */
+        void load() override { show(); }
+        NomGr(const Miejsce &miejsce, const Ryba &ryba);
         ~NomGr();
-
-    protected:
-
-    private:
 };
 
 #endif // NOMGR_HPP

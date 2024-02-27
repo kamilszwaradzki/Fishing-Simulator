@@ -7,15 +7,9 @@
 class Koper : public Zaneta
 {
     public:
-        void load() { cout << "Koper, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Koper, Mnoznik: " << dbMultiplier << endl; }
         Koper();
-        /** Default destructor */
         ~Koper();
-
-    protected:
-
-    private:
 };
 
 #endif // KOPER_HPP

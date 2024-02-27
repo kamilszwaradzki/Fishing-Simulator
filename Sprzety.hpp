@@ -39,6 +39,6 @@
 #include "BackToMenu.hpp"
 #include "SprzetPusty.hpp"
 
-Sprzet* getSprzet(Miejsce &miejsce, Ryba &ryba, Metoda &metoda, int &wybor);
+Sprzet* getSprzet(const Miejsce &miejsce, const Ryba &ryba, const Metoda &metoda, const int &wybor);
 
 #endif // SPRZETY_HPP_INCLUDED

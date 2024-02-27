@@ -1,8 +1,12 @@
 #include "NomZyw.hpp"
 
-NomZyw::NomZyw()
+NomZyw::NomZyw(const Miejsce &miejsce)
 {
-    //ctor
+    if(typeid(miejsce) == typeid(Pomost) || typeid(miejsce) == typeid(Lodz)) {
+        show = nomz1;
+    } else {
+        show = nomz;
+    }
 }
 
 NomZyw::~NomZyw()

@@ -7,15 +7,9 @@
 class Rzepak : public Zaneta
 {
     public:
-        void load() { cout << "Rzepak, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Rzepak, Mnoznik: " << dbMultiplier << endl; }
         Rzepak();
-        /** Default destructor */
         ~Rzepak();
-
-    protected:
-
-    private:
 };
 
 #endif // RZEPAK_HPP

@@ -3,16 +3,17 @@
 
 #include "Sprzet.hpp"
 #include "spinning_m.hpp"
+#include "Miejsce.hpp"
+#include "Pomost.hpp"
+#include "Lodz.hpp"
 
 /// brief: Sprzet minimalny na Spinning
 class MiniSp : public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = minis1;
-        void load() { show(); }
-        /** Default constructor */
-        MiniSp();
-        /** Default destructor */
+        void load() override { show(); }
+        MiniSp(const Miejsce &miejsce);
         ~MiniSp();
 
     protected:

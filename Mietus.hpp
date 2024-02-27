@@ -1,11 +1,5 @@
 #pragma once
-#ifndef LIBS_IMP_CLASS
-    #define LIBS_IMP_CLASS
-    #pragma once
-    #include <iostream>
-    #include <array>
-    #include <memory>
-#endif
+#include "autoloaderstdfunc.hpp"
 #include "Ryba.hpp"
 #include "Metoda.hpp"
 #include "Grunt.hpp"
@@ -17,11 +11,7 @@
 class Mietus : public Ryba {
     public:
     VoidFunctionWithoutParameter show = wybormietus;
-    void load() { show(); };
-    /*std::array<std::unique_ptr<Metoda>, 3> metody = {
-        std::make_unique<Spinning>(),
-        std::make_unique<Splawik>()
-    };*/
+    void load() override { show(); };
     Mietus();
     ~Mietus();
 };

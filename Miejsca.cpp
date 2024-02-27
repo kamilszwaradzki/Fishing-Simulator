@@ -1,7 +1,7 @@
 #include "Miejsca.hpp"
 
 // miejsce: Brzeg, Pomost, Lodz, Lod lub powrot ;p
-Miejsce* getMiejsce(Jezioro &jezioro,int &wybor) {
+Miejsce* getMiejsce(const Jezioro &jezioro, const int &wybor) {
     if (typeid(jezioro) == typeid(Sek) || typeid(jezioro) == typeid(Lanskie)) {
         switch(wybor) {
             case 1: {

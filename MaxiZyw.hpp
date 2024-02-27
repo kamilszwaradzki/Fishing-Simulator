@@ -3,21 +3,18 @@
 
 #include "Sprzet.hpp"
 #include "zywiec_m.hpp"
+#include "Miejsce.hpp"
+#include "Pomost.hpp"
+#include "Lodz.hpp"
 
 /// brief: Sprzet maksymalny na Zywca
 class MaxiZyw : public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = maxiz;
-        void load() { show(); }
-        /** Default constructor */
-        MaxiZyw();
-        /** Default destructor */
+        void load() override { show(); }
+        MaxiZyw(const Miejsce &miejsce);
         ~MaxiZyw();
-
-    protected:
-
-    private:
 };
 
 #endif // MAXIZYW_HPP

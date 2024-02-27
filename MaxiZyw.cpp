@@ -1,8 +1,12 @@
 #include "MaxiZyw.hpp"
 
-MaxiZyw::MaxiZyw()
+MaxiZyw::MaxiZyw(const Miejsce &miejsce)
 {
-    //ctor
+    if(typeid(miejsce) == typeid(Pomost) || typeid(miejsce) == typeid(Lodz)) {
+        show = maxiz1;
+    } else {
+        show = maxiz;
+    }
 }
 
 MaxiZyw::~MaxiZyw()

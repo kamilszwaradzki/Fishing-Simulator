@@ -1,8 +1,12 @@
 #include "MiniSp.hpp"
 
-MiniSp::MiniSp()
+MiniSp::MiniSp(const Miejsce &miejsce)
 {
-    //ctor
+    if(typeid(miejsce) == typeid(Pomost) || typeid(miejsce) == typeid(Lodz)) {
+        show = minis;
+    } else {
+        show = minis1;
+    }
 }
 
 MiniSp::~MiniSp()

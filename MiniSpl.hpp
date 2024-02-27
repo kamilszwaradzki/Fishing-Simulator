@@ -8,14 +8,15 @@
 #include "Ryba.hpp"
 #include "Karp.hpp"
 #include "Pomost.hpp"
+#include "Lodz.hpp"
 
 /// brief: Sprzet minimalny na splawik
 class MiniSpl: public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = mini; // miejsce: z brzegu, metoda: grunt/splawik
-        void load() { show(); }
-        MiniSpl(Miejsce &miejsce, Ryba &ryba);
+        void load() override { show(); }
+        MiniSpl(const Miejsce &miejsce, const Ryba &ryba);
         ~MiniSpl();
 };
 

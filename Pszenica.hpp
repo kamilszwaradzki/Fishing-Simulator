@@ -7,15 +7,9 @@
 class Pszenica : public Zaneta
 {
     public:
-        void load() { cout << "Pszenica, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Pszenica, Mnoznik: " << dbMultiplier << endl; }
         Pszenica();
-        /** Default destructor */
         ~Pszenica();
-
-    protected:
-
-    private:
 };
 
 #endif // PSZENICA_HPP

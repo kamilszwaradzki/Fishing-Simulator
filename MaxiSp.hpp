@@ -3,21 +3,18 @@
 
 #include "Sprzet.hpp"
 #include "spinning_m.hpp"
+#include "Miejsce.hpp"
+#include "Pomost.hpp"
+#include "Lodz.hpp"
 
 /// brief: Sprzet maksymalny na Spinning
 class MaxiSp : public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = maxis1;
-        void load() { show(); }
-        /** Default constructor */
-        MaxiSp();
-        /** Default destructor */
+        void load() override { show(); }
+        MaxiSp(const Miejsce &miejsce);
         ~MaxiSp();
-
-    protected:
-
-    private:
 };
 
 #endif // MAXISP_HPP

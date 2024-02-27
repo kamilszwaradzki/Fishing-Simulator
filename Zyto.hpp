@@ -7,15 +7,9 @@
 class Zyto : public Zaneta
 {
     public:
-        void load() { cout << "Zyto, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Zyto, Mnoznik: " << dbMultiplier << endl; }
         Zyto();
-        /** Default destructor */
         ~Zyto();
-
-    protected:
-
-    private:
 };
 
 #endif // ZYTO_HPP

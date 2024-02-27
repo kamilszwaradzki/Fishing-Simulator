@@ -13,15 +13,9 @@ class BackToMenu : public Jezioro, public Miejsce, public Ryba, public Metoda, p
 {
     public:
         VoidFunctionWithoutParameter show = backToMenuFunction;
-        void load() { show(); }
-        /** Default constructor */
+        void load() override { show(); }
         BackToMenu();
-        /** Default destructor */
         ~BackToMenu();
-
-    protected:
-
-    private:
 };
 
 #endif // BACKTOMENU_HPP

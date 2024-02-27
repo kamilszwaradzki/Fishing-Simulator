@@ -3,21 +3,18 @@
 
 #include "Sprzet.hpp"
 #include "spinning_m.hpp"
+#include "Miejsce.hpp"
+#include "Pomost.hpp"
+#include "Lodz.hpp"
 
 /// brief: Sprzet nominalny na Spinning
 class NomSp : public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = noms1;
-        void load() { show(); }
-        /** Default constructor */
-        NomSp();
-        /** Default destructor */
+        void load() override { show(); }
+        NomSp(const Miejsce &miejsce);
         ~NomSp();
-
-    protected:
-
-    private:
 };
 
 #endif // NOMSP_HPP

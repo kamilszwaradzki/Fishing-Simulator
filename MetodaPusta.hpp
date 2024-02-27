@@ -8,10 +8,8 @@ class MetodaPusta : public Metoda
 {
     public:
         VoidFunctionWithoutParameter show = wyborMetodaPusta;
-        void load() { show(); }
-        /** Default constructor */
+        void load() override { show(); }
         MetodaPusta();
-        /** Default destructor */
         ~MetodaPusta();
 };
 

@@ -7,14 +7,9 @@
 class ZanetaPusta : public Zaneta
 {
     public:
-        void load() { cout << "Wybrano bledna zanete, wracam do menu... " << endl; }
-        /** Default constructor */
+        void load() override { cout << "Wybrano bledna zanete, wracam do menu... " << endl; }
         ZanetaPusta();
-        /** Default destructor */
         ~ZanetaPusta();
-
-    protected:
-    private:
 };
 
 #endif // ZANETAPUSTA_HPP

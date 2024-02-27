@@ -1,8 +1,12 @@
 #include "MaxiSp.hpp"
 
-MaxiSp::MaxiSp()
+MaxiSp::MaxiSp(const Miejsce &miejsce)
 {
-    //ctor
+    if(typeid(miejsce) == typeid(Pomost) || typeid(miejsce) == typeid(Lodz)) {
+        show = maxis;
+    } else {
+        show = maxis1;
+    }
 }
 
 MaxiSp::~MaxiSp()

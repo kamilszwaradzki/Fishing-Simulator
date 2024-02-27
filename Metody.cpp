@@ -1,6 +1,6 @@
 #include "Metody.hpp"
 
-Metoda* getMetoda(Ryba &ryba, int &wybor) {
+Metoda* getMetoda(const Ryba &ryba, const int &wybor) {
     switch(wybor) {
         case 1: {
             if (typeid(ryba) == typeid(Leszcz) || typeid(ryba) == typeid(Lin) ||

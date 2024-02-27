@@ -122,6 +122,10 @@ void menu1()
     cout << "Wybierz Opcje: ";
 }
 
-void placeholder() { std::cout << "Ryba" << std::endl; }
-
 void backToMenuFunction() { system("cls"); std::cout << "Powrot do menu..." << std::endl; }
+
+void infoAboutSuspendProgram(const string &info) {
+                cout << "" << endl;
+                cout << "Nacisnij Enter, " << info;
+                cin.sync();cin.get();
+}

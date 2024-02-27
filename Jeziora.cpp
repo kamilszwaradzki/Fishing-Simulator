@@ -1,6 +1,6 @@
 #include "Jeziora.hpp"
 
-Jezioro* getJezioro(int &jezioro) {
+Jezioro* getJezioro(const int &jezioro) {
     switch(jezioro) {
         case 1:
         {

@@ -20,6 +20,6 @@
 #include "MetodaPusta.hpp"
 
 //metoda zalezy od ryby moga byc rozne
-Metoda* getMetoda(Ryba &ryba, int &wybor);
+Metoda* getMetoda(const Ryba &ryba, const int &wybor);
 
 #endif // METODY_HPP_INCLUDED

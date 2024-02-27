@@ -7,15 +7,9 @@
 class MaczkaMiesna : public Zaneta
 {
     public:
-        void load() { cout << "Maczka Miesna, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Maczka Miesna, Mnoznik: " << dbMultiplier << endl; }
         MaczkaMiesna();
-        /** Default destructor */
         ~MaczkaMiesna();
-
-    protected:
-
-    private:
 };
 
 #endif // MACZKAMIESNA_HPP

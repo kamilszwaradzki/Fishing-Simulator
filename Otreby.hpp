@@ -7,14 +7,9 @@
 class Otreby : public Zaneta
 {
     public:
-        void load() { cout << "Otreby, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Otreby, Mnoznik: " << dbMultiplier << endl; }
         Otreby();
-        /** Default destructor */
         ~Otreby();
-
-    protected:
-    private:
 };
 
 #endif // OTREBY_HPP

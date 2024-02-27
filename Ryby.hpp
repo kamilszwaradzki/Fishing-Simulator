@@ -22,6 +22,6 @@
 #include "RybaPusta.hpp"
 
 // pobiera rybe w zaleznosci od miejsca i wyboru
-Ryba* getRyba(Miejsce &miejsce, int &wybor);
+Ryba* getRyba(const Miejsce &miejsce, const int &wybor);
 
 #endif // RYBY_HPP_INCLUDED

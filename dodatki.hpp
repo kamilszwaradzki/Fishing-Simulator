@@ -1,10 +1,5 @@
-#ifndef LIBS_IMP
-    #define LIBS_IMP
-    #pragma once
-    #include <iostream>
-    #include <windows.h>
-    using namespace std;
-#endif
+#pragma once
+#include "autoloaderstdfunc.hpp"
 
 // wybor dodatkow do zanety na tzw. ryby biale
 void wybor2();

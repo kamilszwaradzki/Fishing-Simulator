@@ -8,15 +8,9 @@ class MiejscePuste : public Miejsce
 {
     public:
         VoidFunctionWithoutParameter show = wyborMiejscePuste;
-        void load() { show(); }
-        /** Default constructor */
+        void load() override { show(); }
         MiejscePuste();
-        /** Default destructor */
         ~MiejscePuste();
-
-    protected:
-
-    private:
 };
 
 #endif // MIEJSCEPUSTE_HPP

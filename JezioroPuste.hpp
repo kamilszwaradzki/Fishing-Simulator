@@ -8,15 +8,9 @@ class JezioroPuste : public Jezioro
 {
     public:
         VoidFunctionWithoutParameter show = wyborJezioroPusta;
-        void load() { show(); }
-        /** Default constructor */
+        void load() override { show(); }
         JezioroPuste();
-        /** Default destructor */
         ~JezioroPuste();
-
-    protected:
-
-    private:
 };
 
 #endif // JEZIOROPUSTE_HPP

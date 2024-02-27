@@ -5,7 +5,6 @@
 
 class Sprzet {
     public:
-        VoidFunctionWithoutParameter show;
         virtual void load() = 0;
         virtual ~Sprzet() { };
 };

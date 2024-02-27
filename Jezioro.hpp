@@ -4,7 +4,6 @@
 
 class Jezioro {
     public:
-    //VoidFunctionWithoutParameter show;
     virtual void load() = 0;
     virtual ~Jezioro() { };
 };

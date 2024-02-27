@@ -7,15 +7,9 @@
 class Krew : public Zaneta
 {
     public:
-        void load() { cout << "Krew, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Krew, Mnoznik: " << dbMultiplier << endl; }
         Krew();
-        /** Default destructor */
         ~Krew();
-
-    protected:
-
-    private:
 };
 
 #endif // KREW_HPP

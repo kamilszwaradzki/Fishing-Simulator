@@ -7,15 +7,9 @@
 class PinkaOchotka : public Zaneta
 {
     public:
-        void load() { cout << "Pinka/Ochotka, Mnoznik: " << dbMultiplier << endl; }
-        /** Default constructor */
+        void load() override { cout << "Pinka/Ochotka, Mnoznik: " << dbMultiplier << endl; }
         PinkaOchotka();
-        /** Default destructor */
         ~PinkaOchotka();
-
-    protected:
-
-    private:
 };
 
 #endif // PINKAOCHOTKA_HPP

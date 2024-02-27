@@ -6,12 +6,7 @@
 class Spinning: public Metoda {
 public:
     VoidFunctionWithoutParameter show = wyborsprz;
-    void load() { show(); }
-    VoidFunctionWithoutParameter sprzety[3] = {
-        minis1,
-        noms1,
-        maxis1
-    };
+    void load() override { show(); }
     Spinning();
     ~Spinning();
 };

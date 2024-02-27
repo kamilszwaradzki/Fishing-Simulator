@@ -8,14 +8,15 @@
 #include "Ryba.hpp"
 #include "Karp.hpp"
 #include "Pomost.hpp"
+#include "Lodz.hpp"
 
 /// brief: Sprzet maksymalny na splawik
 class MaxiSpl : public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = maxi; // miejsce: z brzegu, metoda: grunt/splawik
-        void load() { show(); }
-        MaxiSpl(Miejsce &miejsce, Ryba &ryba);
+        void load() override { show(); }
+        MaxiSpl(const Miejsce &miejsce, const Ryba &ryba);
         ~MaxiSpl();
 };
 

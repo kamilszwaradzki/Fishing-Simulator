@@ -8,15 +8,9 @@ class SprzetPusty : public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = wyborSprzetPusty;
-        void load() { show(); }
-        /** Default constructor */
+        void load() override { show(); }
         SprzetPusty();
-        /** Default destructor */
         ~SprzetPusty();
-
-    protected:
-
-    private:
 };
 
 #endif // SPRZETPUSTY_HPP

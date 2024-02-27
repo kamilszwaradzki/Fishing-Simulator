@@ -6,6 +6,6 @@
 #include "JezioroPuste.hpp"
 #include "BackToMenu.hpp"
 
-Jezioro* getJezioro(int &jezioro);
+Jezioro* getJezioro(const int &jezioro);
 
 #endif // JEZIORA_HPP_INCLUDED

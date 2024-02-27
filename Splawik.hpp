@@ -6,11 +6,7 @@
 class Splawik: public Metoda {
 public:
     VoidFunctionWithoutParameter show = wyborsprz;
-    void load() { show(); }
-    VoidFunctionWithoutParameter sprzety[3] = {
-        mini,
-        nom,
-        maxi
-    };
+    void load() override { show(); }
     Splawik();
+    ~Splawik();
 };

@@ -1,8 +1,12 @@
 #include "MiniZyw.hpp"
 
-MiniZyw::MiniZyw()
+MiniZyw::MiniZyw(const Miejsce &miejsce)
 {
-    //ctor
+    if(typeid(miejsce) == typeid(Pomost) || typeid(miejsce) == typeid(Lodz)) {
+        show = miniz1;
+    } else {
+        show = miniz;
+    }
 }
 
 MiniZyw::~MiniZyw()

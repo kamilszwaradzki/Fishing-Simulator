@@ -6,12 +6,7 @@
 class Zywiec: public Metoda {
 public:
     VoidFunctionWithoutParameter show = wyborsprz;
-    void load() { show(); }
-    VoidFunctionWithoutParameter sprzety[3] = {
-        miniz,
-        nomz,
-        maxiz
-    };
+    void load() override { show(); }
     Zywiec();
     ~Zywiec();
 };

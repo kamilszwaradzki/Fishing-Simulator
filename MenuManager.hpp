@@ -9,20 +9,17 @@
 #include "Metody.hpp"
 #include "Sprzety.hpp"
 #include "Zanety.hpp"
+#include "RybyLosowane.hpp"
+#include "rys.hpp"
+#include "autoloaderstdfunc.hpp"
 // do usuniêcia
 #include "dodatki.hpp"
 
 class MenuManager
 {
     public:
-        /** Default constructor */
         MenuManager(Symulator &symulator, int &wybor);
-        /** Default destructor */
         ~MenuManager();
-
-    protected:
-
-    private:
 };
 
 #endif // MENUMANAGER_HPP

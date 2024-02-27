@@ -3,21 +3,20 @@
 
 #include "Sprzet.hpp"
 #include "grunt_m.hpp"
+#include "Miejsce.hpp"
+#include "Ryba.hpp"
+#include "Karp.hpp"
+#include "Pomost.hpp"
+#include "Lodz.hpp"
 
 /// brief: Sprzet minimalny na Grunt
 class MiniGr : public Sprzet
 {
     public:
         VoidFunctionWithoutParameter show = mini;
-        void load() { show(); }
-        /** Default constructor */
-        MiniGr();
-        /** Default destructor */
+        void load() override { show(); }
+        MiniGr(const Miejsce &miejsce, const Ryba &ryba);
         ~MiniGr();
-
-    protected:
-
-    private:
 };
 
 #endif // MINIGR_HPP

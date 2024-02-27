@@ -1,19 +1,23 @@
 #ifndef SYMULATOR_HPP
 #define SYMULATOR_HPP
 #include "Jezioro.hpp"
+#include "JezioroPuste.hpp"
 #include "Miejsce.hpp"
+#include "MiejscePuste.hpp"
 #include "Ryba.hpp"
+#include "RybaPusta.hpp"
 #include "Metoda.hpp"
+#include "MetodaPusta.hpp"
 #include "Sprzet.hpp"
+#include "SprzetPusty.hpp"
 #include "Zaneta.hpp"
+#include "ZanetaPusta.hpp"
 
 class Symulator
 {
     public:
-        /** Default constructor */
         Symulator();
-        /** Default destructor */
-        virtual ~Symulator();
+        ~Symulator();
 
         /** Access jezioro
          * \return The current value of jezioro
@@ -64,15 +68,13 @@ class Symulator
          */
         void Setzaneta(Zaneta &val) { zaneta = &val; }
 
-    protected:
-
     private:
-        Jezioro* jezioro; //!< Member variable "jezioro"
-        Miejsce* miejsce; //!< Member variable "miejsce"
-        Ryba* ryba; //!< Member variable "ryba"
-        Metoda* metoda; //!< Member variable "metoda"
-        Sprzet* sprzet; //!< Member variable "sprzet"
-        Zaneta* zaneta; //!< Member variable "zaneta"
+        Jezioro* jezioro = new JezioroPuste(); //!< Member variable "jezioro"
+        Miejsce* miejsce = new MiejscePuste(); //!< Member variable "miejsce"
+        Ryba* ryba = new RybaPusta(); //!< Member variable "ryba"
+        Metoda* metoda = new MetodaPusta(); //!< Member variable "metoda"
+        Sprzet* sprzet = new SprzetPusty(); //!< Member variable "sprzet"
+        Zaneta* zaneta = new ZanetaPusta(); //!< Member variable "zaneta"
 };
 
 #endif // SYMULATOR_HPP

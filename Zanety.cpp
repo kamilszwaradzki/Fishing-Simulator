@@ -1,6 +1,6 @@
 #include "Zanety.hpp"
 
-Zaneta* getZaneta(int &wybor, int &zaneta) {
+Zaneta* getZaneta(const int &wybor, const int &zaneta) {
     switch(zaneta) {
         case 1:
         {

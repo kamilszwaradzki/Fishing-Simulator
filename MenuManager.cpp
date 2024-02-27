@@ -5,9 +5,22 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
     //ctor
     bool isExit = false;
     /* \/ zmienne dla case'ow 5 - 7, do usuniecia po refactoringu \/ */
-    int zaneta, grunt;
+    int zaneta, grunt, pogoda, ryba;
     double wynik;
     /* /\ zmienne do usuniecia po refactoringu /\ */
+    // zmienne dla rysunku
+    int graf = 0, znak = 0, l = 0;
+    VoidFunctionWithoutParameter arr_rys[] = {
+        rys,
+        rys1,
+        rys2,
+        rys3,
+        rys4,
+        rys5,
+        rys6,
+        rys7
+    };
+    // koniec zmiennych dla rysunku
     while (isExit != true) {
         menu1();
         cin >> wybor; // jezioro lub wyrabianie zanety cokolwiek co sie zamarzy ;p
@@ -58,10 +71,15 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
 
                 [10]-Wyjscie
             */
-            case 5: ///Obliczanie zanety dla ryb bialych
+            case 5: // Obliczanie zanety dla ryb bialych
+            case 6: // Obliczenie zanety dla ryb drapieznych
             {
                 system("cls");
-                wybor2();
+                if (wybor == 5) {
+                    wybor2();
+                } else {
+                    wybor3();
+                }
                 cin >> zaneta;
                 symulator.Setzaneta(*getZaneta(wybor, zaneta));
                 symulator.Getzaneta()->load();
@@ -74,30 +92,7 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
                 cin >> zaneta;
                 wynik = zaneta * symulator.Getzaneta()->GetdbMultiplier();
                 cout << "Musisz dac " << wynik << " gram" << endl;
-                cout << "" << endl;
-                cout << "Nacisnij Enter, aby wrocic do menu...";
-                cin.sync();cin.get();
-            }
-            break;
-            case 6: ///Obliczenie zanety dla ryb drapieznych
-            {
-                system("cls");
-                wybor3();
-                cin >> zaneta;
-                symulator.Setzaneta(*getZaneta(wybor, zaneta));
-                symulator.Getzaneta()->load();
-                if (typeid(*symulator.Getzaneta()) == typeid(ZanetaPusta) ||
-                    typeid(*symulator.Getzaneta()) == typeid(BackToMenu))
-                    continue;
-                system("cls");
-                symulator.Getzaneta()->load();
-                cout << "Ile chcesz uzyc zanety(w gramach)? : ";
-                cin >> zaneta;
-                wynik = zaneta * symulator.Getzaneta()->GetdbMultiplier();
-                cout << "Musisz dac " << wynik << " gram" << endl;
-                cout << "" << endl;
-                cout << "Nacisnij Enter, aby wrocic do menu...";
-                cin.sync();cin.get();
+                infoAboutSuspendProgram("aby wrocic do menu...");
             }
             break;
             case 7: // idz na ryby
@@ -108,18 +103,13 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
             {
                 grunt = rand() % 3 + 1; // zakres losowania od 1 do 3
                 cout << "grunt= " << grunt << endl;
-                if (grunt == 1)
-                {
+                if (grunt == 1) {
                     grunt = 10;
                     cout << "grunt rowna sie " << grunt << "%" << endl;
-                }
-                else if (grunt == 2)
-                {
+                } else if (grunt == 2) {
                     grunt = 20;
                     cout << "grunt rowna sie " << grunt << "%" << endl;
-                }
-                else if (grunt == 3)
-                {
+                } else if (grunt == 3) {
                     grunt = 30;
                     cout << "grunt rowna sie " << grunt << "%" << endl;
                 }
@@ -129,167 +119,103 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
                 break;
             }
             case 8: // Lowienie ryb(wersja beta)
-                /*wczytaj();
-                if (ryba == 1 && grunt) /// warunek dla gruntu random <-czyli Random, warunek ryba = 1 czyli Leszcz :)
-                {
+            {
+                // wczytaj();
+                if (typeid(*symulator.Getmetoda()) == typeid(MetodaPusta)) {
+                    continue;
+                } else if (typeid(*symulator.Getmetoda()) == typeid(Grunt)) {
                     pogoda = rand() % 2 + 1;
-                    if (pogoda == 1)
-                    {
-                        system("cls");
-                        cout << "Pochmurno,woda niezbyt ciepla :(" << endl;
-                        cin.sync();
-                        cin.get();
-                        system("cls");
-                        ryba = rand() % 39 + 1; // zakres losowania od 1 do 30
-                        if (ryba >= 1 && ryba <= 2)
+                    switch(pogoda) {
+                        case 1: // pogoda sloneczna
+                        case 2: // pogoda pochmurna
                         {
-                            if (grunt == 1)
-                            {
-                                rybaw = rand() % 3 + 0.1;
-                                cout << "Zlapales Leszcza " << rybaw << " kilogramowego !!" << endl;
+                            system("cls");
+                            if (pogoda == 1) {
+                                cout << "Slonecznie,woda jest ciepla." << endl
+                                     << "Nic tylko sie opalac :D" << endl
+                                     << "..." << endl
+                                     << "Albo isc na rybki :D" << endl;
+                            } else {
+                                cout << "Pochmurno,woda niezbyt ciepla :(" << endl;
                             }
-                            else if (grunt == 2)
-                            {
-                                rybaw = rand() % 6 + 0.1;
-                                cout << "Zlapales Leszcza " << rybaw << " kilogramowego !!" << endl;
-                            }
-                            else if (grunt == 3)
-                            {
-                                rybaw = rand() % 10 + 0.1;
-                                cout << "Zlapales Leszcza " << rybaw << " kilogramowego !!" << endl;
-                            }
+                            cin.sync();
+                            cin.get();
+                            system("cls");
+                            ryba = (pogoda == 1) ? rand() % 19 + 1 : rand() % 39 + 1; // zakres losowania od 1 do 30
+                            getWylosowanaRyba(ryba, symulator);
+                            break;
                         }
-                        else if (ryba == 3)
-                        {
-                            rybaw = rand() % 10 + 0.1;
-                            cout << "Zlapales Lina " << rybaw << " kilogramowego !!" << endl;
-                        }
-                        else if (ryba == 4)
-                        {
-                            rybaw = rand() % 30 + 0.1;
-                            cout << "Zlapales Karpia " << rybaw << " kilogramowego !!" << endl;
-                        }
-                        else if (ryba == 5)
-                        {
-                            rybaw = rand() % 5 + 0.1;
-                            cout << "Zlapales Okonia " << rybaw << " kilogramowego !!" << endl;
-                        }
-                        else if (ryba == 6)
-                        {
-                            rybaw = rand() % 2 + 0.1;
-                            cout << "Zlapales Plotke " << rybaw << " kilogramowa !!" << endl;
-                        }
-                        else if (ryba == 7)
-                        {
-                            rybaw = rand() % 2 + 0.1;
-                            cout << "Zlapales Sielawe " << rybaw << " kilogramowa !!" << endl;
-                        }
-                        else if (ryba == 8)
-                        {
-                            rybaw = rand() % 10 + 0.1;
-                            cout << "Zlapales Sieje " << rybaw << " kilogramowa !!" << endl;
-                        }
-                        else if (ryba == 9)
-                        {
-                            rybaw = rand() % 10 + 0.1;
-                            cout << "Zlapales Mietusa " << rybaw << " kilogramowego !!" << endl;
-                        }
-                        else if (ryba == 10)
-                        {
-                            rybaw = rand() % 2 + 0.1;
-                            cout << "Zlapales Wzdrege " << rybaw << " kilogramowa !!" << endl;
-                        }
-                        else if (ryba >= 11)
-                        {
-                            cout << "Niestety nic nie zlapales :(" << endl;
-                        }
-                        cin.sync();
-                        cin.get();
                     }
-                    else if (pogoda == 2)
-                    {
-                        system("cls");
-                        cout << "Slonecznie,woda jest ciepla." << endl;
-                        cout << "Nic tylko sie opalac :D" << endl;
-                        cout << "..." << endl;
-                        cout << "Albo isc na rybki :D" << endl;
-                        cin.sync();
-                        cin.get();
-                        system("cls");
-                        ryba = rand() % 19 + 1; // zakres losowania od 1 do 30
-                        if (ryba == 1)
+                } else if(typeid(*symulator.Getmetoda()) == typeid(Splawik)) {
+                    pogoda = rand() % 2 + 1;
+                    switch(pogoda) {
+                        case 1: // pogoda sloneczna
+                        case 2: // pogoda pochmurna
                         {
-                            if (grunt == 1)
-                            {
-                                rybaw = rand() % 3 + 0.1;
-                                cout << "Zlapales Leszcza " << rybaw << " kilogramowego !!" << endl;
+                            system("cls");
+                            if (pogoda == 1) {
+                                cout << "Slonecznie,woda jest ciepla." << endl
+                                     << "Nic tylko sie opalac :D" << endl
+                                     << "..." << endl
+                                     << "Albo isc na rybki :D" << endl;
+                            } else {
+                                cout << "Pochmurno,woda niezbyt ciepla :(" << endl;
                             }
-                            else if (grunt == 2)
+                            cin.sync();
+                            cin.get();
+                            system("cls");
+                            while (!(znak == 32/* && graf == 8*/))
                             {
-                                rybaw = rand() % 6 + 0.1;
-                                cout << "Zlapales Leszcza " << rybaw << " kilogramowego !!" << endl;
+                                graf = rand() % 8 + 1;
+                                switch (graf)
+                                {
+                                    case 1:
+                                    case 2:
+                                    case 3:
+                                    case 4:
+                                    case 5:
+                                    case 6:
+                                    case 7:
+                                    case 8:
+                                    {
+                                        arr_rys[graf - 1]();
+                                        Sleep(1000);
+                                        if (_kbhit() > 0 /*&& graf == 8*/)
+                                        {
+                                            l = graf > 3 ? (graf > 4 ? (graf > 5 ? (graf > 6 ? rand() % 2 + 1 : rand() % 3 + 1 ) : rand() % 4 + 1 ) : rand() % 5 + 1 ) : (rand() % 6 + 1);
+                                            if (l == 1) {
+                                                ryba = (pogoda == 1) ? rand() % 19 + 1 : ryba = rand() % 39 + 1; // zakres losowania od 1 do 30
+                                                getWylosowanaRyba(ryba, symulator);
+                                            } else if (l >= 2) {
+                                                cout << "Przykro mi niestety ale nic nie ma na haczyku :(" << endl;
+                                            }
+                                            znak = _getch();
+                                            infoAboutSuspendProgram("aby wrocic do menu...");
+                                        }
+                                        break;
+                                    }
+                                    default:
+                                        break;
+                                }
                             }
-                            else if (grunt == 3)
-                            {
-                                rybaw = rand() % 10 + 0.1;
-                                cout << "Zlapales Leszcza " << rybaw << " kilogramowego !!" << endl;
+                            if (znak == 32) {
+                                cout << "Nacisnales Spacje. Koniec petli." << endl;
                             }
+                            znak = 0;
+                            break;
                         }
-                        else if (ryba == 2)
-                        {
-                            rybaw = rand() % 10 + 0.1;
-                            cout << "Zlapales Lina " << rybaw << " kilogramowego !!" << endl;
-                        }
-                        else if (ryba == 3)
-                        {
-                            rybaw = rand() % 30 + 0.1;
-                            cout << "Zlapales Karpia " << rybaw << " kilogramowego !!" << endl;
-                        }
-                        else if (ryba == 4)
-                        {
-                            rybaw = rand() % 5 + 0.1;
-                            cout << "Zlapales Okonia " << rybaw << " kilogramowego !!" << endl;
-                        }
-                        else if (ryba == 5)
-                        {
-                            rybaw = rand() % 2 + 0.1;
-                            cout << "Zlapales Plotke " << rybaw << " kilogramowa !!" << endl;
-                        }
-                        else if (ryba == 6)
-                        {
-                            rybaw = rand() % 2 + 0.1;
-                            cout << "Zlapales Sielawe " << rybaw << " kilogramowa !!" << endl;
-                        }
-                        else if (ryba == 7)
-                        {
-                            rybaw = rand() % 10 + 0.1;
-                            cout << "Zlapales Sieje " << rybaw << " kilogramowa !!" << endl;
-                        }
-                        else if (ryba == 8)
-                        {
-                            rybaw = rand() % 10 + 0.1;
-                            cout << "Zlapales Mietusa " << rybaw << " kilogramowego !!" << endl;
-                        }
-                        else if (ryba == 9)
-                        {
-                            rybaw = rand() % 2 + 0.1;
-                            cout << "Zlapales Wzdrege " << rybaw << " kilogramowa !!" << endl;
-                        }
-                        else if (ryba >= 10)
-                        {
-                            cout << "Niestety nic nie zlapales :(" << endl;
-                        }
-                        cin.sync();
-                        cin.get();
                     }
-                }*/
+                }
                 break;
+            }
             case 9: // czyszczenie wyboru
+            {
                 czyszczenie(); // Funkcja oczyszcza plik dane.txt
                 cout << "Wyczyszczono pomyslnie!" << endl;
                 cin.sync();
                 cin.get();
                 break;
+            }
             case 10:
                 isExit = true;
                 break;

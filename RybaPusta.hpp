@@ -8,15 +8,9 @@ class RybaPusta : public Ryba
 {
     public:
         VoidFunctionWithoutParameter show = wyborRybaPusta;
-        void load() { show(); }
-        /** Default constructor */
+        void load() override { show(); }
         RybaPusta();
-        /** Default destructor */
         ~RybaPusta();
-
-    protected:
-
-    private:
 };
 
 #endif // RYBAPUSTA_HPP
