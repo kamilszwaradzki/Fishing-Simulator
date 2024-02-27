@@ -7,8 +7,17 @@
 #include "MenuManager.hpp"
 
 int main() {
-    int wybor/*, ryba, metoda, sprzet*/;
+    int choice/*, ryba, metoda, sprzet*/;
+    array<int, 7> choices;
+    choices.fill({0});
     Symulator symulator;
-    MenuManager menu(symulator, wybor);
+    wczytaj(choices);
+    symulator.Setjezioro(*getJezioro(choices[0]));
+    symulator.Setmiejsce(*getMiejsce(*symulator.Getjezioro(), choices[1]));
+    symulator.Setryba(*getRyba(*symulator.Getmiejsce(), choices[2]));
+    symulator.Setmetoda(*getMetoda(*symulator.Getryba(), choices[3]));
+    symulator.Setsprzet(*getSprzet(*symulator.Getmiejsce(), *symulator.Getryba(), *symulator.Getmetoda(), choices[4]));
+    symulator.Setzaneta(*getZaneta(choices[5], choices[6]));
+    MenuManager menu(symulator, choice, choices);
     return 0;
 }

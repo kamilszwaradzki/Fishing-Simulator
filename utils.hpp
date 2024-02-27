@@ -6,11 +6,11 @@ typedef void (*VoidFunctionWithoutParameter)(); // type for array of void functi
 // Funkcja do czyszczenia wyboru
 void czyszczenie();
 // Funkcja do Zapisu danych do Pliku
-void zapis();
+void zapisz(const array<int, 7> &wybory);
 // funkcja do wczytywania danych z pliku tekstowego.
-void wczytaj();
+void wczytaj(array<int, 7> &wybory);
 // menu poczatkowe
-void menu();
+void menuDisplaySlowly();
 // menu poczatkujacego wedkarza
 void menu1();
 
@@ -20,4 +20,4 @@ void placeholder();
 // komunikat powrotu do menu
 void backToMenuFunction();
 
-void infoAboutSuspendProgram(const string &info);
+void infoAboutProgramSuspend(const string &info);

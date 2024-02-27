@@ -13,7 +13,7 @@ class NomZyw : public Sprzet
     public:
         VoidFunctionWithoutParameter show = nomz;
         void load() override { show(); }
-        NomZyw(const Miejsce &miejsce);
+        explicit NomZyw(const Miejsce &miejsce);
         ~NomZyw();
 };
 

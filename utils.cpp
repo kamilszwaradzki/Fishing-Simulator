@@ -4,44 +4,38 @@ typedef void (*VoidFunctionWithoutParameter)(); // type for array of void functi
 
 void czyszczenie()
 {
-    ofstream zapis("dane.txt"); /// Funkcja do czyszczenia wyboru
+    ofstream zapis("dane.txt"); // Funkcja do czyszczenia wyboru
     zapis.flush();
     zapis.close();
 }
 
-void zapis(int ryba, int grunt, int splawik) /// Funkcja do Zapisu danych do Pliku
+void zapisz(const array<int, 7> &wybory) // Funkcja do Zapisu danych do Pliku
 {
-    ofstream zapis("dane.txt");
-    zapis << ryba << endl; // zapisuje wartosc ktora wybralismy
-    if (grunt)
-    {
-
-        zapis << grunt << endl; // zapisuje wartosc ktora wybralismy
-    }
-    else if (splawik)
-    {
-        zapis << splawik << endl;
-    }
+    ofstream zapis("dane.txt", ios::trunc);
+    zapis << wybory[0] << endl // zapisuje wartosc ktora wybralismy
+          << wybory[1] << endl
+          << wybory[2] << endl
+          << wybory[3] << endl
+          << wybory[4] << endl
+          << wybory[5] << endl
+          << wybory[6] << endl;
     zapis.close(); // zamyka plik
 }
 
-void wczytaj(int ryba, int grunt, int splawik) /// funkcja do wczytywania danych z pliku tekstowego.
+void wczytaj(array<int, 7>& wybory) // Funkcja do wczytywania danych z pliku tekstowego.
 {
     ifstream wczytaj("dane.txt");
-    wczytaj.open("dane.txt");
-    wczytaj >> ryba;
-    if (grunt)
-    {
-        wczytaj >> grunt;
+    if(wczytaj.bad()) {
+        return;
     }
-    else if (splawik)
-    {
-        wczytaj >> splawik;
+    int it = 0;
+    for (string line; getline(wczytaj, line); ) {
+        wybory[it++] = stoi(line);
     }
     wczytaj.close();
 }
 
-void menu() /// menu poczatkowe
+void menuDisplaySlowly() /// menu poczatkowe
 {
     system("cls");
 
@@ -95,9 +89,9 @@ void menu() /// menu poczatkowe
                     "[10]-Wyjscie \n \n"
                     "Wybierz Opcje: ";
 
-    for (int i = 0; i < tekst.length(); i++) // pętla wykonuje sie od 0 do długości tekstu wprowadzonego w zmiennej tekst
+    for (size_t c = 0; c < tekst.length(); c++) // pętla wykonuje sie od 0 do długości tekstu wprowadzonego w zmiennej tekst
     {
-        cout << tekst[i]; // wyświetlanie na ekranie po kolei każdej litery
+        cout << tekst[c]; // wyświetlanie na ekranie po kolei każdej litery
         Sleep(20);        // tym regulujesz szybkość pisania, wartość w ms
     }
     cout << endl; // znak końca linii
@@ -124,7 +118,7 @@ void menu1()
 
 void backToMenuFunction() { system("cls"); std::cout << "Powrot do menu..." << std::endl; }
 
-void infoAboutSuspendProgram(const string &info) {
+void infoAboutProgramSuspend(const string &info) {
                 cout << "" << endl;
                 cout << "Nacisnij Enter, " << info;
                 cin.sync();cin.get();

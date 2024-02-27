@@ -1,15 +1,23 @@
 #include "MenuManager.hpp"
 
-MenuManager::MenuManager(Symulator &symulator, int &wybor)
+MenuManager::MenuManager(Symulator &symulator, int &wybor, array<int, 7> &choices)
 {
     //ctor
     bool isExit = false;
-    /* \/ zmienne dla case'ow 5 - 7, do usuniecia po refactoringu \/ */
-    int zaneta, grunt, pogoda, ryba;
+    int zaneta, grunt, pogoda, ryba,
+        // zmienne dla rysunku
+        graf = 0, znak = 0, l = 0;
     double wynik;
-    /* /\ zmienne do usuniecia po refactoringu /\ */
-    // zmienne dla rysunku
-    int graf = 0, znak = 0, l = 0;
+    random_device rd;  // Will be used to obtain a seed for the random number engine
+    mt19937 gen(rd()); // Standard mersenne_twister_engine seeded with rd()
+    std::uniform_int_distribution<int> dist2(1, 2);
+    std::uniform_int_distribution<int> dist3(1, 3);
+    std::uniform_int_distribution<int> dist4(1, 4);
+    std::uniform_int_distribution<int> dist5(1, 5);
+    std::uniform_int_distribution<int> dist6(1, 6);
+    std::uniform_int_distribution<int> dist8(1, 8);
+    std::uniform_int_distribution<int> dist19(1, 19);
+    std::uniform_int_distribution<int> dist39(1, 39);
     VoidFunctionWithoutParameter arr_rys[] = {
         rys,
         rys1,
@@ -30,47 +38,45 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
             case 2:
             case 3:
             case 4:
+            {
+
                     symulator.Setjezioro(*getJezioro(wybor));
                     symulator.Getjezioro()->load();
                     if (typeid(*symulator.Getjezioro()) == typeid(JezioroPuste) ||
                         typeid(*symulator.Getjezioro()) == typeid(BackToMenu))
                         continue;
+                    choices[0] = wybor;
                     cin >> wybor; // miejsce: Brzeg, Pomost, Lodz, Lod lub powrot ;p
                     symulator.Setmiejsce(*getMiejsce(*symulator.Getjezioro(), wybor));
                     symulator.Getmiejsce()->load();
                     if (typeid(*symulator.Getmiejsce()) == typeid(MiejscePuste) ||
                         typeid(*symulator.Getmiejsce()) == typeid(BackToMenu))
                         continue;
+                    choices[1] = wybor;
                     cin >> wybor; // Ryba: Leszcz, Lin, Karp, Okon itd. lub powrot ;p
                     symulator.Setryba(*getRyba(*symulator.Getmiejsce(), wybor));
                     symulator.Getryba()->load();
                     if (typeid(*symulator.Getryba()) == typeid(RybaPusta) ||
                         typeid(*symulator.Getryba()) == typeid(BackToMenu))
                         continue;
+                    choices[2] = wybor;
                     cin >> wybor; // Metoda: Grunt, Splawik, Zywiec, Spinning lub powrot ;p
                     symulator.Setmetoda(*getMetoda(*symulator.Getryba(), wybor));
                     symulator.Getmetoda()->load();
                     if (typeid(*symulator.Getmetoda()) == typeid(MetodaPusta) ||
                         typeid(*symulator.Getmetoda()) == typeid(BackToMenu))
                         continue;
+                    choices[3] = wybor;
                     cin >> wybor; // Sprzet: Minimalny, Nominalny, Maksymalny
                     symulator.Setsprzet(*getSprzet(*symulator.Getmiejsce(), *symulator.Getryba(), *symulator.Getmetoda(), wybor));
                     symulator.Getsprzet()->load();
                     if (typeid(*symulator.Getsprzet()) == typeid(SprzetPusty) ||
                         typeid(*symulator.Getsprzet()) == typeid(BackToMenu))
                         continue;
+                    choices[4] = wybor;
+                    zapisz(choices);
                     break;
-            /*
-                Obliczanie zanety:
-                [5]-Na ryby biale
-                [6]-Na ryby drapiezne
-
-                [7]-Idz na ryby
-                [8]-Lowienie ryb(wersja beta)
-                [9]-Czyszczenie wyboru
-
-                [10]-Wyjscie
-            */
+            }
             case 5: // Obliczanie zanety dla ryb bialych
             case 6: // Obliczenie zanety dla ryb drapieznych
             {
@@ -86,13 +92,16 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
                 if (typeid(*symulator.Getzaneta()) == typeid(ZanetaPusta) ||
                     typeid(*symulator.Getzaneta()) == typeid(BackToMenu))
                     continue;
+                choices[5] = wybor;
+                choices[6] = zaneta;
+                zapisz(choices);
                 system("cls");
                 symulator.Getzaneta()->load();
                 cout << "Ile chcesz uzyc zanety(w gramach)? : ";
                 cin >> zaneta;
                 wynik = zaneta * symulator.Getzaneta()->GetdbMultiplier();
                 cout << "Musisz dac " << wynik << " gram" << endl;
-                infoAboutSuspendProgram("aby wrocic do menu...");
+                infoAboutProgramSuspend("aby wrocic do menu...");
             }
             break;
             case 7: // idz na ryby
@@ -101,7 +110,7 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
                 lub jak dobrze dopasujemy zanete na dana rybe czy nie przesadzimy z iloscia zanety itd. (cokolwiek, naprawde mozna to roznie interpretowac)
             */
             {
-                grunt = rand() % 3 + 1; // zakres losowania od 1 do 3
+                grunt = dist3(gen); // zakres losowania od 1 do 3
                 cout << "grunt= " << grunt << endl;
                 if (grunt == 1) {
                     grunt = 10;
@@ -124,7 +133,7 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
                 if (typeid(*symulator.Getmetoda()) == typeid(MetodaPusta)) {
                     continue;
                 } else if (typeid(*symulator.Getmetoda()) == typeid(Grunt)) {
-                    pogoda = rand() % 2 + 1;
+                    pogoda = dist2(gen);
                     switch(pogoda) {
                         case 1: // pogoda sloneczna
                         case 2: // pogoda pochmurna
@@ -141,13 +150,13 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
                             cin.sync();
                             cin.get();
                             system("cls");
-                            ryba = (pogoda == 1) ? rand() % 19 + 1 : rand() % 39 + 1; // zakres losowania od 1 do 30
+                            ryba = (pogoda == 1) ? dist19(gen) : dist39(gen); // zakres losowania od 1 do 30
                             getWylosowanaRyba(ryba, symulator);
                             break;
                         }
                     }
                 } else if(typeid(*symulator.Getmetoda()) == typeid(Splawik)) {
-                    pogoda = rand() % 2 + 1;
+                    pogoda = dist2(gen);
                     switch(pogoda) {
                         case 1: // pogoda sloneczna
                         case 2: // pogoda pochmurna
@@ -164,9 +173,9 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
                             cin.sync();
                             cin.get();
                             system("cls");
-                            while (!(znak == 32/* && graf == 8*/))
+                            while (znak != 32)
                             {
-                                graf = rand() % 8 + 1;
+                                graf = dist8(gen);
                                 switch (graf)
                                 {
                                     case 1:
@@ -180,17 +189,17 @@ MenuManager::MenuManager(Symulator &symulator, int &wybor)
                                     {
                                         arr_rys[graf - 1]();
                                         Sleep(1000);
-                                        if (_kbhit() > 0 /*&& graf == 8*/)
+                                        if (_kbhit() > 0)
                                         {
-                                            l = graf > 3 ? (graf > 4 ? (graf > 5 ? (graf > 6 ? rand() % 2 + 1 : rand() % 3 + 1 ) : rand() % 4 + 1 ) : rand() % 5 + 1 ) : (rand() % 6 + 1);
+                                            l = graf > 3 ? (graf > 4 ? (graf > 5 ? (graf > 6 ? dist2(gen) : dist3(gen) ) : dist4(gen) ) : dist5(gen) ) : (dist6(gen));
                                             if (l == 1) {
-                                                ryba = (pogoda == 1) ? rand() % 19 + 1 : ryba = rand() % 39 + 1; // zakres losowania od 1 do 30
+                                                ryba = (pogoda == 1) ? dist19(gen) : dist39(gen); // zakres losowania od 1 do 30
                                                 getWylosowanaRyba(ryba, symulator);
                                             } else if (l >= 2) {
                                                 cout << "Przykro mi niestety ale nic nie ma na haczyku :(" << endl;
                                             }
                                             znak = _getch();
-                                            infoAboutSuspendProgram("aby wrocic do menu...");
+                                            infoAboutProgramSuspend("aby wrocic do menu...");
                                         }
                                         break;
                                     }

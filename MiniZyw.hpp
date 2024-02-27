@@ -13,7 +13,7 @@ class MiniZyw : public Sprzet
     public:
         VoidFunctionWithoutParameter show = miniz;
         void load() override { show(); }
-        MiniZyw(const Miejsce &miejsce);
+        explicit MiniZyw(const Miejsce &miejsce);
         ~MiniZyw();
 };
 

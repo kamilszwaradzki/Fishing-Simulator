@@ -1,5 +1,6 @@
 #ifndef SYMULATOR_HPP
 #define SYMULATOR_HPP
+#pragma once
 #include "Jezioro.hpp"
 #include "JezioroPuste.hpp"
 #include "Miejsce.hpp"

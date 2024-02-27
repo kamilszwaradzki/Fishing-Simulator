@@ -1,6 +1,6 @@
 #ifndef JEZIOROPUSTE_HPP
 #define JEZIOROPUSTE_HPP
-
+#pragma once
 #include "Jezioro.hpp"
 #include "jezioro_m.hpp"
 

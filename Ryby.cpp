@@ -4,7 +4,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
     switch(wybor) {
         case 1: {
             return new Leszcz();
-            break;
         }
         case 2: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -12,7 +11,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Lin();
             }
-            break;
         }
         case 3: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -20,7 +18,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Karp();
             }
-            break;
         }
         case 4: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -28,7 +25,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Okon();
             }
-            break;
         }
         case 5: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -36,7 +32,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Ploc();
             }
-            break;
         }
         case 6: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -44,7 +39,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Sielawa();
             }
-            break;
         }
         case 7: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -52,7 +46,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Sieja();
             }
-            break;
         }
         case 8: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -60,7 +53,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Szczupak();
             }
-            break;
         }
         case 9: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -68,7 +60,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Mietus();
             }
-            break;
         }
         case 10: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -76,7 +67,6 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new Wzdrega();
             }
-            break;
         }
         case 11: {
             if (typeid(miejsce) == typeid(Lod)) {
@@ -84,11 +74,9 @@ Ryba* getRyba(const Miejsce &miejsce, const int &wybor) {
             } else {
                 return new BackToMenu();
             }
-            break;
         }
         default: {
             return new RybaPusta();
-            break;
         }
     }
 }

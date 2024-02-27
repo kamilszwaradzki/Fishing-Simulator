@@ -13,7 +13,7 @@ class MaxiSp : public Sprzet
     public:
         VoidFunctionWithoutParameter show = maxis1;
         void load() override { show(); }
-        MaxiSp(const Miejsce &miejsce);
+        explicit MaxiSp(const Miejsce &miejsce);
         ~MaxiSp();
 };
 

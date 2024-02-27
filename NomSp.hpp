@@ -13,7 +13,7 @@ class NomSp : public Sprzet
     public:
         VoidFunctionWithoutParameter show = noms1;
         void load() override { show(); }
-        NomSp(const Miejsce &miejsce);
+        explicit NomSp(const Miejsce &miejsce);
         ~NomSp();
 };
 

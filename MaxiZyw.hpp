@@ -13,7 +13,7 @@ class MaxiZyw : public Sprzet
     public:
         VoidFunctionWithoutParameter show = maxiz;
         void load() override { show(); }
-        MaxiZyw(const Miejsce &miejsce);
+        explicit MaxiZyw(const Miejsce &miejsce);
         ~MaxiZyw();
 };
 

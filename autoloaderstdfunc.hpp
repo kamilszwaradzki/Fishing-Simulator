@@ -7,6 +7,9 @@
 #include <synchapi.h> /// dla sleep()
 #include <cstdlib>    /// dla system("clear")
 #include <conio.h>
+#include <array>
+#include <random>
+#include <iomanip>
 using namespace std;
 
 

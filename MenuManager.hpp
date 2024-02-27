@@ -18,7 +18,7 @@
 class MenuManager
 {
     public:
-        MenuManager(Symulator &symulator, int &wybor);
+        MenuManager(Symulator &symulator, int &wybor, array<int, 7> &choices);
         ~MenuManager();
 };
 

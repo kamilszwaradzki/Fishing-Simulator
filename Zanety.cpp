@@ -9,7 +9,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new Krew();
             }
-            break;
         }
         case 2:
         {
@@ -18,7 +17,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new MaczkaMiesna();
             }
-            break;
         }
         case 3:
         {
@@ -27,7 +25,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new MaczkaKostna();
             }
-            break;
         }
         case 4:
         {
@@ -36,7 +33,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new BackToMenu();
             }
-            break;
         }
         case 5:
         {
@@ -45,7 +41,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new ZanetaPusta();
             }
-            break;
         }
         case 6:
         {
@@ -54,7 +49,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new ZanetaPusta();
             }
-            break;
         }
         case 7:
         {
@@ -63,7 +57,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new ZanetaPusta();
             }
-            break;
         }
         case 8:
         {
@@ -72,7 +65,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new ZanetaPusta();
             }
-            break;
         }
         case 9:
         {
@@ -81,7 +73,6 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new ZanetaPusta();
             }
-            break;
         }
         case 10:
         {
@@ -90,12 +81,10 @@ Zaneta* getZaneta(const int &wybor, const int &zaneta) {
             } else {
                 return new ZanetaPusta();
             }
-            break;
         }
         default:
         {
             return new ZanetaPusta();
-            break;
         }
     }
 }

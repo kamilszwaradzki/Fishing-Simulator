@@ -13,7 +13,7 @@ class MiniSp : public Sprzet
     public:
         VoidFunctionWithoutParameter show = minis1;
         void load() override { show(); }
-        MiniSp(const Miejsce &miejsce);
+        explicit MiniSp(const Miejsce &miejsce);
         ~MiniSp();
 
     protected:
